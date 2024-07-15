@@ -2,12 +2,12 @@ trigger:
 - main
 
 pool:
-  vmImage: 'ubuntu-latest'
+  name: 'Default' # Change this to your self-hosted agent pool name
 
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '16.x'  # Specify the version of Node.js you want to use
+    versionSpec: '16.x' # Specify the version of Node.js you want to use
   displayName: 'Install Node.js'
 
 - script: |
